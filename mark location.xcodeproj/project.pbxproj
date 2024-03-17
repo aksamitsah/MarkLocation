@@ -13,6 +13,7 @@
 		6D0430892BA7603D0008586E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6D0430882BA7603D0008586E /* Base */; };
 		6D04308B2BA7603F0008586E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D04308A2BA7603F0008586E /* Assets.xcassets */; };
 		6D04308E2BA7603F0008586E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6D04308D2BA7603F0008586E /* Base */; };
+		6D0430972BA760BB0008586E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0430962BA760BB0008586E /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		6D04308A2BA7603F0008586E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D04308D2BA7603F0008586E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D04308F2BA7603F0008586E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D0430962BA760BB0008586E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6D0430982BA775E80008586E /* mark location.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mark location.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 		6D0430802BA7603D0008586E /* mark location */ = {
 			isa = PBXGroup;
 			children = (
+				6D0430982BA775E80008586E /* mark location.entitlements */,
+				6D0430952BA760A60008586E /* Utils */,
 				6D0430812BA7603D0008586E /* AppDelegate.swift */,
 				6D0430832BA7603D0008586E /* SceneDelegate.swift */,
 				6D0430852BA7603D0008586E /* ViewController.swift */,
@@ -65,6 +70,14 @@
 				6D04308F2BA7603F0008586E /* Info.plist */,
 			);
 			path = "mark location";
+			sourceTree = "<group>";
+		};
+		6D0430952BA760A60008586E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D0430962BA760BB0008586E /* LocationManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0430972BA760BB0008586E /* LocationManager.swift in Sources */,
 				6D0430862BA7603D0008586E /* ViewController.swift in Sources */,
 				6D0430822BA7603D0008586E /* AppDelegate.swift in Sources */,
 				6D0430842BA7603D0008586E /* SceneDelegate.swift in Sources */,
@@ -290,16 +304,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "mark location/mark location.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZA84FUA746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mark location/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,16 +336,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "mark location/mark location.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZA84FUA746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mark location/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
